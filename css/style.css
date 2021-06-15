@@ -1,0 +1,93 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#contenedor {
+    width: 900px;
+    background-color: gray;
+    /*border-radius: 20px;*/
+    /*overflow: hidden;*/
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*CABECERA*/
+header {    
+    background-color: cornflowerblue;    
+}
+.menu-h {
+    background-color:chartreuse;
+}
+#btn-menu {
+   /*display: none;*/ 
+}
+label {
+    display: none;
+    background-color: crimson;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    border-right: solid 1px green;
+}
+label:hover {
+    cursor: pointer;
+    background-color: darkgoldenrod;
+}
+
+.menu-h ul {
+    list-style: none;
+    display: flex;
+    
+    background-color: hotpink;
+    justify-content: center;
+}
+
+.menu-h li {
+    background-color: lightseagreen;
+    padding: 10px;
+    border-right: 1px solid sienna;
+}
+
+.menu-h li:hover {
+    background-color: red;
+}
+
+.menu-h li a {
+    text-decoration: none;    
+    background-color: ivory;
+    display: block;
+    padding: 20px;
+    color: lawngreen;
+}
+
+main {
+    padding: 20px;
+}
+
+@media (max-width:768px) {
+    header label {
+        display: block;
+    }
+    
+    .menu-h {
+        position: absolute;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 1s;
+    }
+    
+    .menu-h ul {
+        flex-direction: column;
+    }
+
+    .menu-h li {
+        border-top: 1px solid purple;
+    }
+
+    #btn-menu:checked ~ .menu-h {
+        margin: 0;
+    }
+
+}
